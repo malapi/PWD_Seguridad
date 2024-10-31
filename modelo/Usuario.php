@@ -75,7 +75,7 @@ class Usuario extends BaseDatos
     
     public function insertar(){
         $resp = false;
-        $sql="INSERT INTO usuarios(usnombre,uspass,usmail,usdeshabilitado)  VALUES('".$this->getusnombre()."','".$this->getuspass()."','".$this->getusmail()."',".$this->getusdeshabilitado().");";
+        $sql="INSERT INTO usuarios(usnombre,uspass,usmail,usdeshabilitado)  VALUES('".$this->getusnombre()."','".$this->getuspass()."','".$this->getusmail()."','0000-00-00 00:00:00');";
         if ($this->Iniciar()) {
             if ($elid = $this->Ejecutar($sql)) {
                 $this->setidusuario($elid);

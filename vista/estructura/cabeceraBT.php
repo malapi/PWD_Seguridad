@@ -13,10 +13,10 @@ include_once("../../configuracion.php");
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/core.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
 
-    <title>PWD MVC </title>    
+    <title>PWD MVC Seguridad </title>    
 </head>
 <?php
-$objTrans = new Session();
+$obTjrans = new Session();
 $resp = $objTrans->validar();
 if($resp) {
    //echo("<script>location.href = '../home/index.php';</script>");
@@ -24,8 +24,6 @@ if($resp) {
     $mensaje ="Error, vuelva a intentarlo";
     echo("<script>location.href = '../login/index.php?msg=".$mensaje."';</script>");
 }
-
-
 ?>
 <body>
 <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">

@@ -3,9 +3,9 @@ class Session{
 
     public function __construct(){
         if (!session_start()) {
-            return false;
+           
         } else {
-            return true;
+           
         }
       }
    
@@ -94,7 +94,7 @@ class Session{
     public function cerrar(){
         $resp = true;
         session_destroy();
-       // $_SESSION['idusuario']=null;
+        //$_SESSION['idusuario']=null;
         return $resp;
     }
    
